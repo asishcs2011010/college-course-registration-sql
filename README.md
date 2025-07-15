@@ -19,10 +19,10 @@ It demonstrates:
 ---
 
 ## 📦 **Files**
-| File             | Description                                      |
-|------------------|--------------------------------------------------|
-| `ER_DIAGRAM.png` | ER diagram showing the database relationships   |
-| `schema.sql`     | SQL script to create tables and constraints     |
+| File             | Description                                     |
+|------------------|-------------------------------------------------|
+| `ER_DIAGRAM.png` | ER diagram showing the database relationships  |
+| `schema.sql`     | SQL script to create tables and constraints    |
 
 ---
 
@@ -36,7 +36,15 @@ It demonstrates:
 
 ## ⚡ **How to use**
 
-1. **Create the PostgreSQL database** (only if it doesn't already exist):
 ```bash
+# Create database (if not exists)
 createdb college_registration
+
+# Create tables
 psql -d college_registration -f schema.sql
+
+# Insert sample data
+psql -d college_registration -f insert_sample_data.sql
+
+# Try sample queries
+psql -d college_registration -f queries.sql
