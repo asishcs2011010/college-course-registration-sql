@@ -11,18 +11,18 @@ It demonstrates:
 
 ## 🧰 **Tables included**
 - `students` – stores student details
-- `courses` – course catalog
-- `instructors` – instructors teaching the courses
-- `enrollment` – students enrolled in courses + grades
+- `courses` – list of courses offered
+- `instructors` – instructors who teach courses
+- `enrollment` – which students enroll in which courses + their grades
 - `teaches` – which instructors teach which courses in which semester
 
 ---
 
 ## 📦 **Files**
-| File | Description |
-|--|--|
-| `ER_DIAGRAM.png` | ER diagram of the database |
-| `schema.sql` | SQL script to create tables and constraints |
+| File             | Description                                      |
+|------------------|--------------------------------------------------|
+| `ER_DIAGRAM.png` | ER diagram showing the database relationships   |
+| `schema.sql`     | SQL script to create tables and constraints     |
 
 ---
 
@@ -30,12 +30,13 @@ It demonstrates:
 ✅ Students enroll in courses  
 ✅ Courses taught by instructors  
 ✅ Store grades per student per course  
-✅ Proper constraints for data integrity
+✅ Proper constraints for data integrity (primary keys, foreign keys, unique emails, etc.)
 
 ---
 
 ## ⚡ **How to use**
-1. Create a PostgreSQL database (e.g., `college`)
-2. Run:
+
+1. **Create the PostgreSQL database** (only if it doesn't already exist):
 ```bash
-psql -d college -f schema.sql
+createdb college_registration
+psql -d college_registration -f schema.sql
